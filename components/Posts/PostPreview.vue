@@ -1,10 +1,13 @@
 <template>
-    <nuxt-link :to="`/posts/${1}`" class="post-preview">
+    <nuxt-link :to="`/posts/${id}`" class="post-preview">
         <article>
-          <div class="post-thumbnail" style="background-image: url('https://cdn.sabay.com/cdn/media.sabay.com/media/sabay-news/Sport-News/International-Sports/Freelancer-Sport/football(87)/6340122caf378_1665143340_medium.png');"></div>
+          <div 
+            class="post-thumbnail" 
+            :style="{backgroundImage: 'url('+thumbnail+')'}"
+          ></div>
           <div class="post-content">
-            <h1>Post title</h1>
-            <p>Post text</p>
+            <h1>{{ title }}</h1>
+            <p>{{ previewText }}</p>
           </div>
         </article>
     </nuxt-link>
@@ -12,11 +15,29 @@
 
 <script>
 export default {
-    
+  name: 'PostPreview',
+  props: {
+    id: {
+      type: String,
+      required: true
+    },
+    title: {
+      type: String,
+      required: true
+    },
+    previewText: {
+      type: String,
+      required: true
+    },
+    thumbnail: {
+      type: String,
+      required: true
+    },
+  }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .home-page {
   .intro {
     height: 300px;
