@@ -10,7 +10,7 @@
             id="2"
             thumbnail="https://cdn.sabay.com/cdn/media.sabay.com/media/sabay-news/Sport-News/International-Sports/soccer/Soccer54/Soccer144/Soccer212/634386e3ea970_1665369780_large.jpg"
             title="Hello"
-            previewText="This is my text."
+            previewText="This is my text 2."
         />
     </section> 
 </template>
