@@ -1,16 +1,11 @@
 <template>
     <section class="post-list">
         <PostPreview 
+            :is-admin="isAdmin"
             id="1"
             thumbnail="https://cdn.sabay.com/cdn/media.sabay.com/media/sabay-news/Sport-News/International-Sports/soccer/Soccer54/Soccer144/Soccer212/634386e3ea970_1665369780_large.jpg"
             title="Hello"
             previewText="This is my text."
-        />
-        <PostPreview 
-            id="2"
-            thumbnail="https://cdn.sabay.com/cdn/media.sabay.com/media/sabay-news/Sport-News/International-Sports/soccer/Soccer54/Soccer144/Soccer212/634386e3ea970_1665369780_large.jpg"
-            title="Hello"
-            previewText="This is my text 2."
         />
     </section> 
 </template>
@@ -21,6 +16,12 @@ import PostPreview from "@/components/Posts/PostPreview"
 export default {
     components: {
       PostPreview,
+    },
+    props: {
+        isAdmin: {
+            type: Boolean,
+            default: false,
+        }
     }
 }
 </script>
